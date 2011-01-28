@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^queue$	queue.php
+RewriteRule ^queue/([0-9]+)$	queue.php?id=$1
+RewriteRule ^build$	build.php
+RewriteRule ^build/([0-9]+)$	build.php?id=$1
+RewriteRule ^buildports$	buildports.php
