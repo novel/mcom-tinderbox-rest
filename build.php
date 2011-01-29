@@ -10,8 +10,8 @@ $RESTService = new RESTService();
 $RESTService->check_auth($request_headers);
 
 if ($request_method == "get") {
-	if (in_array("id", $_GET)) 
-		echo $RESTService->getBuild($_GET["id"]);	
+	if (array_key_exists("id", $_GET)) 
+		echo $RESTService->getBuild($_GET["id"]);
 	else
 		echo $RESTService->listBuilds();
 } else {

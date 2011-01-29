@@ -45,6 +45,10 @@ class RESTService {
 	function getBuild($id) {
 		$build = $this->tinderboxDS->getBuildById($id);
 
+		if ($build == NULL) {
+			return $this->_not_found();
+		}
+
 		$builds_object = array("builds" => $this->_constructBuild($build));
 
 		return $this->_encode($builds_object);
@@ -152,6 +156,10 @@ class RESTService {
 		$response_data["summary"]["reason"] = $message;
 
 		return json_encode($response_data);
+	}
+
+	function _not_found() {
+		header("HTTP/1.0 404 Not Found");
 	}
 
 	function _constructBuild($build) {
