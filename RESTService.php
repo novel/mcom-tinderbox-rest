@@ -49,7 +49,7 @@ class RESTService {
 			return $this->_not_found();
 		}
 
-		$builds_object = array("builds" => $this->_constructBuild($build));
+		$builds_object = array("builds" => array($this->_constructBuild($build)));
 
 		return $this->_encode($builds_object);
 	}
@@ -73,7 +73,11 @@ class RESTService {
 	function getQueueEntry($id) {
 		$entry = $this->tinderboxDS->getBuildPortsQueueEntryById($id);
 
-		$entries_object = array("entries" => $this->_constructEntry($entry));
+		if ($entry == NULL) {
+			return $this->_not_found();
+		}
+
+		$entries_object = array("entries" => array($this->_constructEntry($entry)));
 
 		return $this->_encode($entries_object);
 	}
@@ -102,7 +106,7 @@ class RESTService {
 				}
 			}
 
-			$buildports = array();
+			$buildports = array("buildports" => array());
 
 			$i = 0;
 			foreach ($activeBuilds as $build) {

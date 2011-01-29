@@ -10,7 +10,7 @@ $RESTService = new RESTService();
 $RESTService->check_auth($request_headers);
 
 if ($request_method == "get") {
-	if (in_array("id", $_GET)) {
+	if (array_key_exists("id", $_GET)) {
 		//echo $RESTService->get($_GET["id"]);
 
 		echo $RESTService->getQueueEntry($_GET["id"]);
@@ -18,8 +18,6 @@ if ($request_method == "get") {
 		echo $RESTService->listQueueEntries();
 } else if ($request_method == "put") {
 	$request_body = http_get_request_body();
-
-	/*echo $request_body;*/
 
 	$entry_object = json_decode($request_body)->entry;
 
