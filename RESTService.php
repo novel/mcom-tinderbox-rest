@@ -4,6 +4,8 @@ set_include_path(get_include_path() . PATH_SEPARATOR . "..");
 
 require_once 'core/TinderboxDS.php';
 
+define('TB_API_VERSION', '1.0');
+
 class RESTService {
 
 	function RESTService() {
@@ -27,6 +29,12 @@ class RESTService {
 				exit($this->_error("Authentication failed"));
 		} else {
 			exit($this->_error("Authentication failed"));
+		}
+
+		$requested_api_version = $headers['X-Tinderbox-Api-Version'];
+
+		if ($requested_api_version != TB_API_VERSION) {
+			exit($this->_error("Requestion API version is not supported by service"));
 		}
 	}
 
