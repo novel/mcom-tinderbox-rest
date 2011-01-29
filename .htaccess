@@ -3,4 +3,5 @@ RewriteRule ^queue$	queue.php
 RewriteRule ^queue/([0-9]+)$	queue.php?id=$1
 RewriteRule ^build$	build.php
 RewriteRule ^build/([0-9]+)$	build.php?id=$1
-RewriteRule ^buildports$	buildports.php
+RewriteRule ^buildport$		buildport.php
+RewriteRule ^buildport/([0-9]+)$	buildport.php?id=$1

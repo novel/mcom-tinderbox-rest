@@ -88,7 +88,7 @@ class RESTService {
 
 		$this->tinderboxDS->addBuildPortsQueueEntry($entry);
 
-		return $this->_encode(array("status" => "ok"));
+		return $this->_encode(array());
 	}
 
 	function getLatestBuildPorts($count, $build_id) {
