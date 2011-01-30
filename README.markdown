@@ -55,7 +55,7 @@ You can grab client [here](https://github.com/novel/mcom-tinderbox-client).
 
 Contacts
 --------
- * Project page on github: https://github.com/novel/mcom-tinderbox-rest
+ * [Project page on github](https://github.com/novel/mcom-tinderbox-rest)
  * Contact e-mail: [novel@FreeBSD.org](mailto:novel@FreeBSD.org), any feedback is welcome!
 
 [Marcuscom Tinderbox]: http://tinderbox.marcuscom.com/
