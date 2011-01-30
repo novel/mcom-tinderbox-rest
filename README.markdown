@@ -4,7 +4,7 @@ mcom-tinderbox-rest
 Overview
 --------
 mcom-tinderbox-rest is an addition to
-[Marcuscom Tinderbox](http://tinderbox.marcuscom.com/) which
+[Marcuscom Tinderbox][] which
 allows it to provide REST-like API for the services it
 already provides.
 
@@ -16,7 +16,7 @@ web ui and doing all the job by hand.
 
 Installation
 ------------
-Assume that you have Marcuscom Tinderbox installed and configured
+Assume that you have [Marcuscom Tinderbox][] installed and configured
 already (if not, please refer to http://tinderbox.marcuscom.com/README.html
 on how to do that).
 
@@ -44,16 +44,20 @@ Basically, only two things are importent:
 URL rewriting is used to provide nice REST-like URLs like /api/build/1
 instead of of build.php?id=1 for example. mcom-tinderbox-rest comes with
 .htaccess which contains all the rewriting rules. So Apache should be
-configured to include mod_rewrite and AllowOverride to enable .htaccess
+configured to include [mod_rewrite][] and [AllowOverride][] to enable .htaccess
 parsing (other option would be to embed things into main configuration file).
 
 And SSL so the scripts were served using HTTPS.
 
 Client
 ------
-You can grab client here: https://github.com/novel/mcom-tinderbox-client
+You can grab client [here](https://github.com/novel/mcom-tinderbox-client).
 
 Contacts
 --------
 Project page on github: https://github.com/novel/mcom-tinderbox-rest
 Contact e-mail: novel@FreeBSD.org, any feedback is welcome!
+
+[Marcuscom Tinderbox]: http://tinderbox.marcuscom.com/
+[mod_rewrite]: http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html
+[AllowOverride]: http://httpd.apache.org/docs/2.2/mod/core.html#allowoverride
