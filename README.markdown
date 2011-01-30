@@ -17,7 +17,7 @@ web ui and doing all the job by hand.
 Installation
 ------------
 Assume that you have [Marcuscom Tinderbox][] installed and configured
-already (if not, please refer to http://tinderbox.marcuscom.com/README.html
+already (if not, please refer to [its documentation](http://tinderbox.marcuscom.com/README.html)
 on how to do that).
 
 When you're done with tinderbox configuration, you need only one additional
@@ -55,8 +55,8 @@ You can grab client [here](https://github.com/novel/mcom-tinderbox-client).
 
 Contacts
 --------
-Project page on github: https://github.com/novel/mcom-tinderbox-rest
-Contact e-mail: novel@FreeBSD.org, any feedback is welcome!
+ * Project page on github: https://github.com/novel/mcom-tinderbox-rest
+ * Contact e-mail: [novel@FreeBSD.org](mailto:novel@FreeBSD.org), any feedback is welcome!
 
 [Marcuscom Tinderbox]: http://tinderbox.marcuscom.com/
 [mod_rewrite]: http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html
